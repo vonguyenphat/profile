@@ -4,10 +4,7 @@ import Image from "next/image";
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 export default function Contract() {
-   const openInNewTab = (url: any) => {
-      const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-      if (newWindow) newWindow.opener = null
-   }
+
    return (
       <>
          <div className='mt-[10px] sm:mt-[30px]'>

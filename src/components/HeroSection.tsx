@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from "next/link";
 import { TypeAnimation } from 'react-type-animation';
+
 export default function HeroSection() {
    return (
       <section>
