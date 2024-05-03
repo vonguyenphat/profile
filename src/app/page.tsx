@@ -1,7 +1,9 @@
 import AboutMe from "@/components/AboutMe";
+import Contract from "@/components/Contract";
 import HeroSection from "@/components/HeroSection";
 import MySkills from "@/components/MySkills";
 import Navbar from "@/components/Navbar";
+import Projects from "@/components/Projects";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
         <HeroSection />
         <AboutMe/>
         <MySkills/>
+        <Projects/>
+        <Contract/>
       </main>
     </div>
   );
