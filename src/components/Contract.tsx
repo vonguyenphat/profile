@@ -4,6 +4,10 @@ import Image from "next/image";
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 export default function Contract() {
+   const openInNewTab = (url: any) => {
+      const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+      if (newWindow) newWindow.opener = null
+   }
    return (
       <>
          <div className='mt-[10px] sm:mt-[30px]'>
@@ -14,10 +18,10 @@ export default function Contract() {
                I&apos;m{" "}  currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll{" "} try my best to get back to you!
             </p>
             <div className="socials flex flex-row gap-2">
-               <Link href="https://github.com/vonguyenphat">
+               <Link href="https://github.com/vonguyenphat" rel="noopener noreferrer" target="_blank">
                   <Image src={GithubIcon} alt="Github Icon" />
                </Link>
-               <Link href="http://linkedin.com/in/pal03dev">
+               <Link href="http://linkedin.com/in/pal03dev" rel="noopener noreferrer" target="_blank">
                   <Image src={LinkedinIcon} alt="Linkedin Icon" />
                </Link>
             </div>
