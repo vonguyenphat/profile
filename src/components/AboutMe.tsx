@@ -37,7 +37,6 @@ const TAB_DATA = [
 ];
 
 export default function AboutMe() {
-
    return (
       <>
          <div className='grid grid-cols-1 sm:grid-cols-2 sm:mt-[40px] mt-[20px]'>
@@ -49,11 +48,10 @@ export default function AboutMe() {
                   height={500}
                />
             </div>
-            <div className='ps-10 pt-[10px] sm:pt-0'>
+            <div className='sm:ps-10 pt-[10px] sm:pt-0'>
                <h1 className='text-white mb-4 text-3xl sm:text-4xl lg:text-4xl lg:leading-normal font-extrabold text-center sm:text-left'>About Me</h1>
-               <p className='text-white text-base sm:text-lg mb-6 lg:text-xl '>I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, HTML, CSS, Java, Spring boot, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.
+               <p className='text-white text-base sm:text-lg mb-6 lg:text-xl text-justify tracking-[1px]'>I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, HTML, CSS, Java, Spring boot, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.
                </p>
-               
             </div>
          </div>
       </>
