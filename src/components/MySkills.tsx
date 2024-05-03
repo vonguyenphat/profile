@@ -20,7 +20,7 @@ export default function MySkills() {
                   </div>
                </div>
                <div className=' max-w-[400px] w-[400px] bg-[#181818] p-[20px] rounded-[30px] pb-[30px]'>
-                  <h1 className='mb-4 text-xl sm:text-xl lg:text-2xl lg:leading-normal font-[550] text-center text-[#9e5eda]'>Frontend Development</h1>
+                  <h1 className='mb-4 text-xl sm:text-xl lg:text-2xl lg:leading-normal font-[550] text-center text-[#9e5eda]'>Backend Development</h1>
                   <div className='grid grid-rows-4 grid-flow-col px-[30px] pt-[20px]'>
                      {
                         listBackend.map((skill) => <RenderSkills key={1} skill={skill} />)
