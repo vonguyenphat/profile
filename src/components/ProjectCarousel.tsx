@@ -39,10 +39,10 @@ export default function ProjectCarousel() {
          >
             <CarouselContent>
                {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                      <div className="">
-                        <Card className='border-none bg-[#181818] '>
-                           <CardContent className="flex aspect-square items-center justify-center">
+                        <Card className='border-none bg-[#181818]'>
+                           <CardContent className="flex aspect-square items-center justify-center p-0">
                               <span className="text-3xl font-semibold text-white">{index + 1}</span>
                            </CardContent>
                         </Card>
