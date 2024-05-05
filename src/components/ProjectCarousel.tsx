@@ -9,6 +9,9 @@ import {
    CarouselPrevious,
    type CarouselApi,
 } from "@/components/ui/carousel"
+import Image from 'next/image'
+import { Maximize } from 'lucide-react'
+import Link from 'next/link'
 
 
 export default function ProjectCarousel() {
@@ -29,33 +32,79 @@ export default function ProjectCarousel() {
 
 
    return (
-      <div>
+      <div className='flex flex-col items-center w-full '>
          <Carousel
             setApi={setApi}
             opts={{
                align: "center",
             }}
-            className="w-full max-w-sm"
+            className="w-[100%] sm:w-[90%]"
          >
             <CarouselContent>
                {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={`index ${index}`} className="md:basis-1/2 lg:basis-1/3 ">
                      <div className="">
-                        <Card className='border-none bg-[#181818]'>
-                           <CardContent className="flex aspect-square items-center justify-center p-0">
-                              <span className="text-3xl font-semibold text-white">{index + 1}</span>
+                        <Card className='border-none bg-[#181818] '>
+                           <CardContent className="flex  items-center justify-center p-0">
+                              <div className=''>
+                                 <Image src={project.image} alt="hero image"
+                                    quality={100}
+                                    width={500} height={100}
+                                 />
+                                 <div className='p-[24px] '>
+                                    <Link href="/#detail" className='text-white font-[560]'>{project.title}</Link>
+                                    <div className='flex gap-[10px] mt-[10px]'>
+                                       {
+                                          project.technology.map((item, index) => (
+                                             <div key={index} className=''>
+                                                <span className='flex gap-x-[3px]'>
+                                                   <Image src={item.icons} alt="hero image"
+                                                      quality={100}
+                                                      width={15} height={10}
+                                                   />
+                                                   <span className='text-white text-[11px]'>{item.description}</span>
+                                                </span>
+                                             </div>
+                                          ))
+                                       }
+                                    </div>
+                                    <p className="text-[#ADB7BE] mt-[20px] text-[13px] sm:text-lg mb-6 lg:text-[14px] text-left">{project.description}</p>
+
+                                 </div>
+                              </div>
                            </CardContent>
                         </Card>
                      </div>
                   </CarouselItem>
                ))}
             </CarouselContent >
-            <CarouselPrevious className='invisible sm:visible text-white bg-[#8200fc] border-none' />
-            <CarouselNext className='invisible sm:visible text-white bg-[#8200fc] border-none'/>
+            {/* <CarouselPrevious className='invisible sm:visible text-white bg-[#8200fc] border-none' />
+            <CarouselNext className='invisible sm:visible text-white bg-[#8200fc] border-none' /> */}
          </Carousel>
          <div className="py-2 text-center text-sm text-muted-foreground">
             Slide {current} of {count}
          </div>
       </div>
    )
+}
+
+
+const projects = [{
+
+}]
+
+const project = {
+   image: '/images/image_project_e_commerce.jpeg',
+   title: 'Multilingual Online Shopping Website Built With ReactJS and NodeJs',
+   technology: [
+      {
+         description: 'ReactJS',
+         icons: '/images/react_icon.png'
+      },
+      {
+         description: 'HTML',
+         icons: '/images/html_icon.png'
+      }
+   ],
+   description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend'
 }
