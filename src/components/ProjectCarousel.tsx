@@ -141,7 +141,7 @@ const projects = [
 
 const project = {
    image: '/images/image_project_e_commerce.jpeg',
-   title: 'Multilingual Online Shopping Website Built With ReactJS and NodeJs',
+   title: 'E-Commerce Website Built With ReactJS and NodeJs',
    technology: [
       {
          description: 'ReactJS',
