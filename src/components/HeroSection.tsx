@@ -16,7 +16,7 @@ export default function HeroSection() {
                   <br />
                   <TypeAnimation
                      sequence={[
-                        'Pal03',
+                        'Võ Nguyễn Phát',
                         1000,
                         'Web Developer',
                         1000,

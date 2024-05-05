@@ -42,7 +42,7 @@ export default function ProjectCarousel() {
             className="w-[100%] sm:w-[90%]"
          >
             <CarouselContent>
-               {Array.from({ length: 5 }).map((_, index) => (
+               {projects.map((project, index) => (
                   <CarouselItem key={`index ${index}`} className="md:basis-1/2 lg:basis-1/3 ">
                      <div className="">
                         <Card className='border-none bg-[#181818] '>
@@ -138,21 +138,3 @@ const projects = [
       preview: '#'
    }
 ]
-
-const project = {
-   image: '/images/image_project_e_commerce.jpeg',
-   title: 'E-Commerce Website Built With ReactJS and NodeJs',
-   technology: [
-      {
-         description: 'ReactJS',
-         icons: '/images/react_icon.png'
-      },
-      {
-         description: 'HTML',
-         icons: '/images/html_icon.png'
-      }
-   ],
-   description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
-   sourceCode: 'https://github.com/vonguyenphat',
-   preview: '#'
-}
