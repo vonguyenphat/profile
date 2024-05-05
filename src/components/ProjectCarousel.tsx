@@ -1,6 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent } from "@/components/ui/card"
+import GithubIcon from "../../public/github-icon.svg";
+
 import {
    Carousel,
    CarouselContent,
@@ -10,7 +12,6 @@ import {
    type CarouselApi,
 } from "@/components/ui/carousel"
 import Image from 'next/image'
-import { Maximize } from 'lucide-react'
 import Link from 'next/link'
 
 
@@ -46,12 +47,12 @@ export default function ProjectCarousel() {
                      <div className="">
                         <Card className='border-none bg-[#181818] '>
                            <CardContent className="flex  items-center justify-center p-0">
-                              <div className=''>
+                              <div >
                                  <Image src={project.image} alt="hero image"
                                     quality={100}
                                     width={500} height={100}
                                  />
-                                 <div className='p-[24px] '>
+                                 <div className='p-[24px]'>
                                     <Link href="/#detail" className='text-white font-[560]'>{project.title}</Link>
                                     <div className='flex gap-[10px] mt-[10px]'>
                                        {
@@ -69,7 +70,19 @@ export default function ProjectCarousel() {
                                        }
                                     </div>
                                     <p className="text-[#ADB7BE] mt-[20px] text-[13px] sm:text-lg mb-6 lg:text-[14px] text-left">{project.description}</p>
-
+                                    <div className='text-white flex gap-[10px] text-[13px] font-[530]'>
+                                       <Link href={project.sourceCode} rel="noopener noreferrer" target="_blank" className='flex bg-[#8200fc] p-[5px] sm:p-[12px] rounded-[8px] items-center'>
+                                          <p>Go to source code &nbsp;</p>
+                                          <Image
+                                             src={GithubIcon}
+                                             alt="Github Icon"
+                                             className='w-[25px]'
+                                          />
+                                       </Link>
+                                       <Link href="/#detail" className='bg-[#c8b037] p-[8px] sm:p-[12px] rounded-[8px] flex items-center'>
+                                          Preview
+                                       </Link>
+                                    </div>
                                  </div>
                               </div>
                            </CardContent>
@@ -89,9 +102,42 @@ export default function ProjectCarousel() {
 }
 
 
-const projects = [{
-
-}]
+const projects = [
+   {
+      image: '/images/image_project_e_commerce.jpeg',
+      title: 'Multilingual Online Shopping Website Built With ReactJS and NodeJs',
+      technology: [
+         {
+            description: 'ReactJS',
+            icons: '/images/react_icon.png'
+         },
+         {
+            description: 'HTML',
+            icons: '/images/html_icon.png'
+         }
+      ],
+      description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
+      sourceCode: 'https://github.com/vonguyenphat',
+      preview: '#'
+   },
+   {
+      image: '/images/image_project_e_commerce.jpeg',
+      title: 'Multilingual Online Shopping Website Built With ReactJS and NodeJs',
+      technology: [
+         {
+            description: 'ReactJS',
+            icons: '/images/react_icon.png'
+         },
+         {
+            description: 'HTML',
+            icons: '/images/html_icon.png'
+         }
+      ],
+      description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
+      sourceCode: 'https://github.com/vonguyenphat',
+      preview: '#'
+   }
+]
 
 const project = {
    image: '/images/image_project_e_commerce.jpeg',
@@ -106,5 +152,7 @@ const project = {
          icons: '/images/html_icon.png'
       }
    ],
-   description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend'
+   description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
+   sourceCode: 'https://github.com/vonguyenphat',
+   preview: '#'
 }
