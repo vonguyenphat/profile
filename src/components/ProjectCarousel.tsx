@@ -43,10 +43,10 @@ export default function ProjectCarousel() {
          >
             <CarouselContent>
                {projects.map((project, index) => (
-                  <CarouselItem key={`index ${index}`} className="md:basis-1/2 lg:basis-1/3 ">
-                     <div className="">
-                        <Card className='border-none bg-[#181818] '>
-                           <CardContent className="flex  items-center justify-center p-0">
+                  <CarouselItem key={`index ${index}`} className="md:basis-1/2 lg:basis-1/3 p-0 ml-[20px]">
+                     <div >
+                        <Card className='border-none bg-[#181818]'>
+                           <CardContent>
                               <div >
                                  <Image src={project.image} alt="hero image"
                                     quality={100}
@@ -69,7 +69,10 @@ export default function ProjectCarousel() {
                                           ))
                                        }
                                     </div>
-                                    <p className="text-[#ADB7BE] mt-[20px] text-[13px] sm:text-lg mb-6 lg:text-[14px] text-left">{project.description}</p>
+                                    <div className=''>
+                                       <p className="text-[#ADB7BE] mt-[20px] text-[13px] sm:text-lg mb-6 lg:text-[14px] text-left line-clamp-3">{project.description}</p>
+                                    </div>
+
                                     <div className='text-white flex gap-[10px] text-[13px] font-[530]'>
                                        <Link href={project.sourceCode} rel="noopener noreferrer" target="_blank" className='flex bg-[#8200fc] p-[5px] sm:p-[12px] rounded-[8px] items-center'>
                                           <p>Go to source code &nbsp;</p>
@@ -116,7 +119,7 @@ const projects = [
             icons: '/images/html_icon.png'
          }
       ],
-      description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
+      description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
       sourceCode: 'https://github.com/vonguyenphat',
       preview: '#'
    },
