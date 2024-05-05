@@ -43,7 +43,7 @@ export default function ProjectCarousel() {
          >
             <CarouselContent>
                {projects.map((project, index) => (
-                  <CarouselItem key={`index ${index}`} className="md:basis-1/2 lg:basis-1/3 p-0 ml-[20px]">
+                  <CarouselItem key={`index ${index}`} className="md:basis-1/2 xl:basis-1/3 p-0 ml-[20px]">
                      <div >
                         <Card className='border-none bg-[#181818]'>
                            <CardContent>
@@ -58,13 +58,13 @@ export default function ProjectCarousel() {
                                        {
                                           project.technology.map((item, index) => (
                                              <div key={index} className=''>
-                                                <span className='flex gap-x-[3px]'>
+                                                <div className='flex gap-x-[3px] mt-2'>
                                                    <Image src={item.icons} alt="hero image"
                                                       quality={100}
                                                       width={15} height={10}
                                                    />
                                                    <span className='text-white text-[11px]'>{item.description}</span>
-                                                </span>
+                                                </div>
                                              </div>
                                           ))
                                        }
