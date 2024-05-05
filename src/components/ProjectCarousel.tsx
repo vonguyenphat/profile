@@ -115,11 +115,49 @@ const projects = [
             icons: '/images/react_icon.png'
          },
          {
+            description: 'NodeJS',
+            icons: '/images/nodejs-icon.png'
+         },
+         {
+            description: 'MongoDB',
+            icons: '/images/mongodb_plain.png'
+         }
+      ],
+      description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
+      sourceCode: 'https://github.com/vonguyenphat',
+      preview: '#'
+   },
+   {
+      image: '/images/image_project_e_commerce.jpeg',
+      title: 'Multilingual Online Shopping Website Built With ReactJS and NodeJs',
+      technology: [
+         {
+            description: 'ReactJS',
+            icons: '/images/react_icon.png'
+         },
+         {
             description: 'HTML',
             icons: '/images/html_icon.png'
          }
       ],
-      description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
+      description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
+      sourceCode: 'https://github.com/vonguyenphat',
+      preview: '#'
+   },
+   {
+      image: '/images/image_project_e_commerce.jpeg',
+      title: 'Multilingual Online Shopping Website Built With ReactJS and NodeJs',
+      technology: [
+         {
+            description: 'ReactJS',
+            icons: '/images/react_icon.png'
+         },
+         {
+            description: 'HTML',
+            icons: '/images/html_icon.png'
+         }
+      ],
+      description: 'I have developed a multilingual E-commerce website that allows customers to shop online for consumer products. The website is built using ReactJS for the user interface and NodeJS for the backend',
       sourceCode: 'https://github.com/vonguyenphat',
       preview: '#'
    },
