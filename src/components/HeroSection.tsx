@@ -40,7 +40,7 @@ export default function HeroSection() {
                   </Link>
                   <Link
                      download
-                     href="./Tuong.pdf"
+                     href="./VONGUYENPHAT_CV.pdf"
                      rel="noopener noreferrer" target="_blank"
                      className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-[#8200fc] hover:bg-slate-800 text-white mt-3 text-center sm:text-left">
                      <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
